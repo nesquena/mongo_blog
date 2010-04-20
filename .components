@@ -1,0 +1,7 @@
+--- 
+:test: shoulda
+:script: rightjs
+:mock: rr
+:renderer: haml
+:orm: mongoid
+:stylesheet: sass
