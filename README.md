@@ -1,13 +1,13 @@
 # MongoBlog #
 
-This is an aspiring blogging platform similar to [scanty](http://github.com/adamwiggins/scanty) or 
+This is an aspiring project intended to be a blogging platform similar to [scanty](http://github.com/adamwiggins/scanty) or 
 [Typo](http://github.com/fdv/typo). The intent is primarily to provide a simple platform built upon 
 [Sinatra](http://www.sinatrarb.com/), [Padrino](http://www.padrinorb.com/), and [Mongoid](http://mongoid.org/)
 allowing the easy management and deployment of a relatively full-featured blog.
 
 ## Note ##
 
-Right now this is basically an experiment! So please use this at your own risk
+Right now this is not much more than an experiment! So please use this at your own risk
 until this message is removed. Demo is at [MongoBlog Demo](mongo_blog.lipsiasoft.biz)
 
 ## Installation ##
