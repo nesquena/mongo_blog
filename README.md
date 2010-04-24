@@ -8,7 +8,7 @@ allowing the easy management and deployment of a relatively full-featured blog.
 ## Note ##
 
 Right now this is not much more than an experiment! So please use this at your own risk
-until this message is removed. Demo is at [MongoBlog Demo](mongo_blog.lipsiasoft.biz)
+until this message is removed. Demo is at [MongoBlog Demo](http://mongo_blog.lipsiasoft.biz)
 
 ## Installation ##
 
