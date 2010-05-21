@@ -1,8 +1,7 @@
 PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)
 require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
 
-class Test::Unit::TestCase
-  include RR::Adapters::RRMethods
+class Riot::Situation
   include Rack::Test::Methods
 
   def app

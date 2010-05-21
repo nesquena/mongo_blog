@@ -1,5 +1,5 @@
 --- 
-:test: shoulda
+:test: riot
 :script: rightjs
 :mock: rr
 :renderer: haml

@@ -7,12 +7,13 @@ gem 'thin' # or mongrel
 
 # Component requirements
 gem 'haml'
-gem 'mongoid', :path => 'vendor/mongoid'
+gem 'mongoid'
 gem 'bson_ext', :require => "mongo"
 
 # Test requirements
 gem 'rr', :group => "test"
-gem 'shoulda', :group => "test"
+gem 'riot', :group => "test"
+gem 'riot-mongoid', :group => "test"
 gem 'rack-test', :require => 'rack/test', :group => 'test'
 
 # Padrino
