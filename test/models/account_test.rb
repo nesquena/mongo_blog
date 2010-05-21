@@ -15,6 +15,21 @@ context "Account Model" do
 
   end
   
+  context "validation" do
+    context "email" do
+      asserts("on success") { Account.generate(:email => 'real@email.com') }
+      asserts("on failure") { Account.generate(:email => 'dog') }.not!
+    end
+    context "password" do
+      asserts("on success") { Account.generate(:password => 'test', :password_confirmation => 'test') }
+      asserts("on failure") { Account.generate(:password => 'tes', :password_confirmation => '') }
+    end
+    context "role" do
+      asserts("on success") { Account.generate(:role => 'admin') }
+      asserts("on failure") { Account.generate(:role => '!@34s') }.not!
+    end
+  end
+  
   context "authentication" do
     setup { Account.generate(:email => 'test@test.com', :password => 'test', :password_confirmation => 'test') }
     
