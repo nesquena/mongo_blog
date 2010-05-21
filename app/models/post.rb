@@ -8,6 +8,9 @@ class Post
   field :tags,      :type => Array
   
   
+  validates_presence_of :title, :body
+  validates_uniqueness_of :title
+  
   before_save :to_permalink
   
   def to_permalink

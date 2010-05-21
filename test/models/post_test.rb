@@ -14,7 +14,7 @@ context "Post Model" do
   end
   
   context "to_permalink" do
-    setup { Post.create(:title => "Hello World!") }
+    setup { Post.create(:title => "Hello World!",:body => "Mongo blog") }
     
     asserts("sets permalink") { topic.permalink }.equals "hello_world"
   end
