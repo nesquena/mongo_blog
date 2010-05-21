@@ -4,7 +4,7 @@ context "Post Model" do
   setup { Post.delete_all }
   
   context "definition" do
-    setup { Post.new }
+    setup { Post.spawn }
     
     asserts_topic.has_field :title,     :type => String
     asserts_topic.has_field :body,      :type => String
@@ -15,7 +15,7 @@ context "Post Model" do
   end
   
   context "to_permalink" do
-    setup { Post.create(:title => "Hello World!",:body => "Mongo blog") }
+    setup { Post.generate(:title => "Hello World!",:body => "Mongo blog") }
     
     asserts("sets permalink") { topic.permalink }.equals "hello_world"
   end
