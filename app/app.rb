@@ -1,8 +1,9 @@
 class MongoBlog < Padrino::Application
-  configure do
-    register SassInitializer
-    enable :sessions
-  end
+  register Padrino::Mailer
+  register Padrino::Helpers
+  register SassInitializer
+  
+  enable :sessions
 
   get :root, :map => "/" do
     redirect url(:posts, :index)
