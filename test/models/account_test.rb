@@ -12,6 +12,8 @@ context "Account Model" do
     asserts_topic.has_field :crypted_password, :type => String
     asserts_topic.has_field :salt,             :type => String
     asserts_topic.has_field :role,             :type => String
+    
+    asserts_topic.has_association :has_many_related, :posts
 
   end
   

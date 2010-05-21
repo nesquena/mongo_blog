@@ -7,6 +7,7 @@ class Post
   field :permalink, :type => String
   field :tags,      :type => Array
   
+  belongs_to_related :account
   
   validates_presence_of :title, :body
   validates_uniqueness_of :title

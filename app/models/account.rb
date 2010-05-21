@@ -9,6 +9,9 @@ class Account
   field :crypted_password, :type => String
   field :salt,             :type => String
   field :role,             :type => String
+  
+  # Associations
+  has_many_related :posts
 
   # Validations
   validates_presence_of     :email, :role

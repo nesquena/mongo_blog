@@ -10,6 +10,9 @@ context "Post Model" do
     asserts_topic.has_field :body,      :type => String
     asserts_topic.has_field :permalink, :type => String
     asserts_topic.has_field :tags,      :type => Array
+    
+    asserts_topic.has_association :belongs_to_related, :account
+    
     asserts_topic.responds_to :to_permalink
   end
   
