@@ -1,10 +1,34 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_config.rb')
 
-class AccountControllerTest < Test::Unit::TestCase
-  context "Account Model" do
-    should 'construct new instance' do
-      @account = Account.new
-      assert_not_nil @account
+context "Account Model" do
+  setup { Account.delete_all }
+  
+  context "definition" do
+    setup { Account.spawn }
+
+    asserts_topic.has_field :name,             :type => String
+    asserts_topic.has_field :surname,          :type => String
+    asserts_topic.has_field :email,            :type => String
+    asserts_topic.has_field :crypted_password, :type => String
+    asserts_topic.has_field :salt,             :type => String
+    asserts_topic.has_field :role,             :type => String
+
+  end
+  
+  context "authentication" do
+    setup { Account.generate(:email => 'test@test.com', :password => 'test', :password_confirmation => 'test') }
+    
+    asserts("crypted password") { topic.crypted_password.nil? }.not!
+    
+    context "authenticate" do
+      asserts("on success") { topic.email }.equals Account.authenticate('test@test.com','test').email
+      asserts("on failure") { Account.authenticate('test@test.com','fail') }.equals nil
     end
   end
+  
+
+  
+
+  
+  
 end
