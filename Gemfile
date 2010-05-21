@@ -6,6 +6,7 @@ gem 'rack-flash'
 gem 'thin' # or mongrel
 
 # Component requirements
+gem 'disqus'
 gem 'haml'
 gem 'mongoid'
 gem 'bson_ext', :require => "mongo"
