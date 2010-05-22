@@ -25,7 +25,7 @@ context "Account Model" do
     end
     context "password" do
       asserts("on success") { Account.generate(:password => 'test', :password_confirmation => 'test') }
-      asserts("on failure") { Account.generate(:password => 'tes', :password_confirmation => '') }
+      asserts("on failure") { Account.generate(:password => 'tes', :password_confirmation => '') }.not!
     end
     context "role" do
       asserts("on success") { Account.generate(:role => 'admin') }

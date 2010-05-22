@@ -7,9 +7,12 @@ module Factoroid
 
     def generate(overrides = {}, &block)
       instance = Factory.build(name.underscore, overrides)
-      instance.save
-      yield(instance) if block_given?
-      instance
+      if instance.save
+        yield(instance) if block_given?
+        instance
+      else
+        nil
+      end
     end
 
     def generate!(overrides = {}, &block)
