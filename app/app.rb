@@ -1,5 +1,5 @@
 class MongoBlog < Padrino::Application
-  register Disqus::Initializer
+  register DisqusInitializer
   register Padrino::Mailer
   register Padrino::Helpers
   register SassInitializer
