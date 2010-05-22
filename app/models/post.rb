@@ -5,7 +5,9 @@ class Post
   field :title,     :type => String
   field :body,      :type => String
   field :permalink, :type => String
-  field :tags,      :type => Array
+  field :tags,      :type => Array,   :default => []
+  field :draft,     :type => Boolean, :default => false
+  alias :is_draft? :draft
   
   belongs_to_related :account
   

@@ -9,9 +9,12 @@ context "Post Model" do
     asserts_topic.has_field :title,     :type => String
     asserts_topic.has_field :body,      :type => String
     asserts_topic.has_field :permalink, :type => String
-    asserts_topic.has_field :tags,      :type => Array
+    asserts_topic.has_field :tags,      :type => Array,   :default => []
+    asserts_topic.has_field :draft,     :type => Boolean, :default => false
     
     asserts_topic.has_association :belongs_to_related, :account
+    
+    asserts_topic.respond_to :is_draft?
   end
   
   context "to_permalink" do
