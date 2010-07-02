@@ -1,8 +1,8 @@
 class MongoBlog < Padrino::Application
-  register DisqusInitializer
   register Padrino::Mailer
   register Padrino::Helpers
   register SassInitializer
+  register DisqusInitializer
   
   enable :sessions
 

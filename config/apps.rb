@@ -25,5 +25,5 @@ However, the mounted core can be modified as needed:
 =end
 
 # Mounts the core application for this project
-Padrino.mount_core("MongoBlog")
+Padrino.mount("MongoBlog").to("/")
 Padrino.mount("Admin").to("/admin")
